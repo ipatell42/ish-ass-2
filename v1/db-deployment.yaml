@@ -25,5 +25,5 @@ spec:
         ports:
         - containerPort: 3306
         env: 
-         - name: MYSQL_ROOT_PASSWORD
-           value: ish
+        - name: MYSQL_ROOT_PASSWORD
+          value: ish
