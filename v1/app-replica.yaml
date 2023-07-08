@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: app-replica
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: employees
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: employees
+        version: v1
+    spec:
+      containers:
+        - name: app-replica
+          image: 838856494475.dkr.ecr.us-east-1.amazonaws.com/ass1_application:v0.1
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DBHOST
+              value: appservice.sqldb.svc.cluster.local
+            - name: DBUSER
+              value: root
+            - name: DBPORT
+              value: "3306"
+            - name: APP_COLOR
+              value: blue
+            - name: DBPWD
+              value: ish
