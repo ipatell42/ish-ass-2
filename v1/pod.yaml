@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-ass2
+  label:
+    name: db-ass2
+spec:
+  containers:
+    - name: db-ass2
+      image: 838856494475.dkr.ecr.us-east-1.amazonaws.com/ass1_database:v0.1
+      ports:
+        - containerPort: 3306
+      env:
+      - name: MYROOT_SQL_PASSWORD
+        value: ish
