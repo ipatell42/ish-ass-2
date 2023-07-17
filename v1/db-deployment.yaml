@@ -3,19 +3,16 @@ kind: Deployment
 metadata:
   name: mysql
   labels:
-    app: employees
-    version: v1
+    app: mysq
 spec:
   selector:
     matchLabels:
-      app: employees
-      version: v1
+      app: mysq
   replicas: 1
   template:
     metadata:
       labels:
-          app: employees
-          version: v1
+        app: mysq
     spec:
       containers:
       - name: db-ass2
