@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
- labels:
+  labels:
     app: employees
     version: v1
 spec:
