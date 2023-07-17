@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: db-rep
- labels:
+  labels:
     app: mysql
 spec:
   replicas: 3
