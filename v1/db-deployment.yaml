@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: mysql
   labels:
-    app: mysq
+    app: mysql
 spec:
   selector:
     matchLabels:
-      app: mysq
+      app: mysql
   replicas: 1
   template:
     metadata:
       labels:
-        app: mysq
+        app: mysql
     spec:
       containers:
       - name: db-ass2
