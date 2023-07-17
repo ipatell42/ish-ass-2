@@ -8,9 +8,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-      labels:
-        app: employees
-        version: v1
+      app: employees
+      version: v1
   replicas: 1
   template:
     metadata:
