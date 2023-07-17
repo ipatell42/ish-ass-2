@@ -2,18 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
-  labels:
-    app.kubernetes.io/name: mysql
-    app.kubernetes.io/component: backend
+ labels:
+    app: employees
+    version: v1
 spec:
   selector:
     matchLabels:
-      name: db-ass2
+      labels:
+        app: employees
+        version: v1
   replicas: 1
   template:
     metadata:
       labels:
-        name: db-ass2
+          app: employees
+          version: v1
     spec:
       containers:
       - name: db-ass2
